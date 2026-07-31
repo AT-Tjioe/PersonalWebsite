@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APGuns.com</title>
-    <link rel="stylesheet" href="PW.css">
+    <title>Our Inventory</title>
+    <!-- Both files link to the exact same style sheet -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Navigation -->
     <header>
-        <div class="container">
-            <h1 class="logo">AP Guns</h1>
+        <div class="container header-flex">
+            <a href="#" class="logo">AP Guns</a>
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Checkout Guns</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,45 +25,92 @@
 
     <!-- Hero / About Section -->
     <section id="about" class="hero-section">
-        <div class="container hero-content">
-            <img src="ColtM4A1.png" alt="Alexander Purnomo">
-            <h2>Hello, I'm Alexander Purnomo</h2>
-            <p>Welcome to my gun store! Check out our selection of top-rated firearms and Buy!</p>
-            <a href="#projects" class="btn">View Guns</a>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2>Top Rated Guns</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>AK-47</h3>
-                    <p>The AK-47, officially known as the Avtomat Kalashnikova, is a Soviet-designed, gas-operated assault rifle chambered for the 7.62×39mm intermediate cartridge. Developed by Mikhail Kalashnikov in 1947 and officially adopted by the Soviet military in 1949, it has become the most widely produced and influential firearm in history, with an estimated 75 to 100 million units built globally.</p>
-                </div>
-                <div class="project-card">
-                    <h3>M4A1</h3>
-                    <p>The M4A1 is a selective-fire, gas-operated assault rifle chambered for the 5.56×45mm NATO cartridge. It is a further development of the M16 rifle and is widely used by the United States military and other allied forces.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Desert Eagle</h3>
-                    <p>The Desert Eagle is a large-caliber semi-automatic pistol designed by John Garand and manufactured by Eagle Industries.</p>
-                </div>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h2>Hello, I'm Alexander Purnomo</h2>
+                <p>Welcome to my store. Discover a curated selection of top-rated, reliable firearms built for precision and performance.</p>
+                <a href="inventory.html" class="btn">Explore Inventory</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="ColtM4A1.webp" alt="Featured Firearm M4A1" class="hero-img">
             </div>
         </div>
     </section>
 
+<div class="inventory-grid">
+
+    <!-- Inside index.html - Hero Section -->
+     <a href="inventory.html" class="btn">Explore Inventory (you can go here aswell)</a>
+        <div class="container">
+            <p class="section-subtitle">Curated Collection</p>
+            <h2 class="section-title">Featured Firearms</h2>
+            
+            <div class="inventory-grid">
+                <article class="item-card">
+                    <div class="item-details">
+                        <h3>AK-47</h3>
+                        <p>The AK-47 is a legendary, gas-operated rifle chambered for the 7.62×39mm intermediate cartridge. Developed by Mikhail Kalashnikov, it has become one of the most widely recognized and durable firearms globally.</p>
+                    </div>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-details">
+                        <h3>M4A1</h3>
+                        <p>A selective-fire, gas-operated rifle chambered for the 5.56×45mm NATO cartridge. Widely utilized by the United States military, it is renowned for its lightweight modularity and tactical reliability.</p>
+                    </div>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-details">
+                        <h3>Desert Eagle</h3>
+                        <p>The Desert Eagle is an iconic, large-caliber semi-automatic pistol. Universally celebrated for its distinct visual profile, high stopping power, and unique gas-operated mechanism.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 4. NEW PRODUCT: Glock 19 Card -->
+            <article class="item-card">
+                <div class="item-details">
+                    <h3>Glock 19</h3>
+                    <p>A compact, highly reliable semi-automatic pistol chambered in 9x19mm. Known for its simplicity and tactical durability.</p>
+                </div>
+            </article>
+
+            <!-- 5. NEW PRODUCT: Remington 870 Card -->
+            <article class="item-card">
+                <div class="item-details">
+                    <h3>Remington 870</h3>
+                    <p>A classic pump-action shotgun widely recognized for its robust construction, smooth cycle actions, and versatile reliability in sports shooting.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Have an interesting gun purchase you want to have or any other questions? Drop me a line below.</p>
+        <div class="container small-container">
+            <h2 class="section-title text-center">Get In Touch</h2>
+            <p class="section-desc text-center">Have questions about an upcoming purchase or custom order? Reach out to me directly below.</p>
+            
             <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Submit</button>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" placeholder="How can I help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-full">Send Message</button>
             </form>
         </div>
     </section>
@@ -70,7 +118,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; All rights reserved from AP Guns.</p>
+            <p>&copy; All rights reserved. AP Guns.</p>
         </div>
     </footer>
 
